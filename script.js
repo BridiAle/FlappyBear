@@ -17,8 +17,8 @@ function applyGravity() {
     bear.style.top = bear_props.top + bear_dy + 'px';
     bear_props = bear.getBoundingClientRect();
 
-    if (bear_props) {
-
+    if (bear_props.y < -30 || bear_props > 832) {
+        return;
     }
 
     requestAnimationFrame(applyGravity);
