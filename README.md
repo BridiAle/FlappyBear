@@ -9,7 +9,7 @@ The group decided to make a “new version” of the extremely famous smartphone
 </br>
 
 
-#####The Tasks:
+##### The Tasks:
 <br>
 <b>STEFANO AVANZO</b>: Graphic elements, CSS code, README.md file 
 <b>ALESSANDRO BRIDI</b>: implements the logic code, GIT administrator
