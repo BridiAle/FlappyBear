@@ -16,3 +16,9 @@ body {
     left: 40vw;
     z-index: 100;
 }
+
+#TITLE {
+    font-family: 'Press Start 2P';
+    font-size: 75px;
+    
+}
