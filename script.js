@@ -23,4 +23,25 @@ function applyGravity() {
 
     requestAnimationFrame(applyGravity);
 }
-requestAnimationFrame(applyGravity);
+applyGravity();
+
+
+const tubes = [document.getElementById('tube1'), document.getElementById('tube2'), document.getElementById('tube3'), document.getElementById('tube4')];
+const tubenegs = [document.getElementById('tubeneg1'), document.getElementById('tubeneg2'), document.getElementById('tubeneg3'), document.getElementById('tubeneg4')];
+let positions = [window.innerWidth / 2, window.innerWidth / 2 + window.innerWidth / 4, window.innerWidth / 2 + window.innerWidth / 4 * 2, window.innerWidth / 2 + window.innerWidth / 4 * 3];
+
+function moveTubes() {
+    for (var i=0; i<4; i++) {
+        positions[i] -= 4;
+        tubes[i].style.left = positions[i] + 'px';
+        tubenegs[i].style.left = positions[i] + 'px';
+        if (positions[i] <= -100) {
+            positions[i] = window.innerWidth;
+            tubes[i].style.height = Math.floor(Math.random() * 500 + 50) + 'px';
+            tubenegs[i].style.height = window.innerHeight - tubes[i].style.height - 100;
+        }
+    }
+
+    requestAnimationFrame(moveTubes);
+}
+moveTubes();
