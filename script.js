@@ -30,6 +30,11 @@ const tubes = [document.getElementById('tube1'), document.getElementById('tube2'
 const tubenegs = [document.getElementById('tubeneg1'), document.getElementById('tubeneg2'), document.getElementById('tubeneg3'), document.getElementById('tubeneg4')];
 let positions = [window.innerWidth / 2, window.innerWidth / 2 + window.innerWidth / 4, window.innerWidth / 2 + window.innerWidth / 4 * 2, window.innerWidth / 2 + window.innerWidth / 4 * 3];
 
+for (var i=0; i<4; i++) {
+    tubes[i].style.height = Math.floor(Math.random() * 500 + 50) + 'px';
+    tubenegs[i].style.height = (window.innerHeight - parseInt(tubes[i].style.height) - 200) + 'px';
+}
+
 function moveTubes() {
     for (var i=0; i<4; i++) {
         positions[i] -= 4;
@@ -38,7 +43,7 @@ function moveTubes() {
         if (positions[i] <= -100) {
             positions[i] = window.innerWidth;
             tubes[i].style.height = Math.floor(Math.random() * 500 + 50) + 'px';
-            tubenegs[i].style.height = window.innerHeight - tubes[i].style.height - 100;
+            tubenegs[i].style.height = (window.innerHeight - parseInt(tubes[i].style.height) - 200) + 'px';
         }
     }
 
