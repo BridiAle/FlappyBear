@@ -9,6 +9,32 @@ body {
     overflow: hidden;
 }
 
+#start {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1001;
+    background-color: white;
+}
+
+#title {
+    font-family: "Press Start 2P";
+    font-size: 75px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tostart {
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%);
+}
+
 #bear {
     width: 200px;
     height: 150px;
@@ -25,12 +51,10 @@ body {
     position: absolute;
 }
 
-#tubeneg1, #tubeneg2, #tubeneg3, #tubeneg4 {
+#tubeneg1,
+#tubeneg2,
+#tubeneg3,
+#tubeneg4 {
     bottom: 0;
     height: 300;
-}
-=======
-#TITLE {
-    font-family: 'Press Start 2P';
-    font-size: 75px;
 }
