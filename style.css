@@ -6,6 +6,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 #bear {
@@ -17,8 +18,19 @@ body {
     z-index: 100;
 }
 
+.tube {
+    width: 100px;
+    height: 400px;
+    background-color: green;
+    position: absolute;
+}
+
+#tubeneg1, #tubeneg2, #tubeneg3, #tubeneg4 {
+    bottom: 0;
+    height: 300;
+}
+=======
 #TITLE {
     font-family: 'Press Start 2P';
     font-size: 75px;
-    
 }
